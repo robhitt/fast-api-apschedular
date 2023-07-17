@@ -5,4 +5,4 @@ scheduler = BackgroundScheduler()
 
 # assigning jobs to scheduler
 # scheduler.add_job(print_name, 'interval', seconds=20)
-scheduler.add_job(print_name, 'cron', hour=15, minute=54, second=0)
+scheduler.add_job(print_name, 'cron', hour=15, minute=36, second=0)

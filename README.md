@@ -6,3 +6,7 @@
 
 ## Tutorials
 https://www.youtube.com/watch?v=m5H54NcvBRU
+https://youtu.be/sRnsR-T0Lxc
+
+## Notes
+`hour=` is UTC time
