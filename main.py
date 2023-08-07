@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+import os
 from jobs.my_jobs import scheduler
-from jobs.tasks import print_name
+
+# from jobs.tasks import print_name
 
 
 app = FastAPI(
-    title="Fast API -w- apscheduler",
-    description="Setting up and testing apscheduler"
+    title="Fast API -w- apscheduler", description="Setting up and testing apscheduler"
 )
 
 # start scheduler
@@ -13,10 +14,9 @@ scheduler.start()
 
 
 @app.get("/")
-def name_task():
-    try:
-        return print_name()
-    except Exception as err:
-        return {
-            "error": err
-        }
+async def root():
+    return {
+        "name": "Portal API",
+        "version": "1.0.0",
+        "environment": os.environ.get("FASTAPI_CONFIG"),
+    }
